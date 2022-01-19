@@ -57,8 +57,13 @@ namespace PeterHan.SandboxTools {
 						// Include anti-entropy thermo nullifier and neural vacillator
 						// Vacillator's ID is private, we have to make do
 						ok = (name.StartsWith("Prop") && name.Length > 4 && char.IsUpper(
-							name, 4)) || name == MassiveHeatSinkConfig.ID ||
-							name == "GeneShuffler";
+							name, 4)) || name == MassiveHeatSinkConfig.ID 
+							|| name == "GeneShuffler"
+							|| name == WarpConduitReceiverConfig.ID
+							|| name == WarpConduitSenderConfig.ID
+							|| name == WarpReceiverConfig.ID
+							|| name == WarpPortalConfig.ID;
+						
 					}
 					return ok;
 				}, null, Def.GetUISprite(Assets.GetPrefab("PropLadder"))));
